@@ -115,6 +115,9 @@ function get_chroot_rhel {
 	cd mod_chroot-0.5
 	apxs -cia mod_chroot.c
 	cd /
+	setsebool httpd_disable_trans 1
+	sed 'RETVAL\=0/i ROOT\=\/chroot' $dir_exec_rhel
+	sed 'echo \-n \$\"Stopping \$prog\: \"/i \/bin\/ln \-s \$ROOT\/var\/run\/httpd\.pid \/var\/run\/httpd\.pid' $dir_exec_rhel
 	service httpd restart
 }
 
@@ -123,6 +126,8 @@ function get_chroot_deb {
 	clear
 	echo -e "Start download and install mod_chroot for Deb distro"
 	apt-get install libapache2-mod-chroot mod-chroot-common apache2.2-common
+	sed 'RETVAL\=0/i ROOT\=\/chroot' $dir_exec_deb
+	sed 'echo \-n \$\"Stopping \$prog\: \"/i \/bin\/ln \-s \$ROOT\/var\/run\/httpd\.pid \/var\/run\/httpd\.pid' $dir_exec_deb
 	echo -e "Installation complete"
 	service apache2 restart
 }
