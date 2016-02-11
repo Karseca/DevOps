@@ -1,3 +1,4 @@
+#!/bin/bash
 #
 # This script is intdended to automatically
 # generate,configure ssh_keys and test the  
