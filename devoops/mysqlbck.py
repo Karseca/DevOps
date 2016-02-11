@@ -32,7 +32,7 @@ def dump_db():
 				
 	# Test connection to database
 	print "Testing connection"
-	connection=MySQLdb.connect(host,port,user,pass,db)
+	connection=MySQLdb.connect(host,port,user,password,db)
 	cursor = db.cursor()
 	cursor.execute("SELECT VERSION()")
 	cursor.close()
