@@ -9,14 +9,12 @@ For the script *mysqlbck.py* you'll need to install a package with pip.
   
   After install you can test it like this:
    
-    ```
-     # python
+    ``` # python
      >>> import MySQLdb
      >>> host = 'hostname'
      >>> port = 'port_num'
      >>> user = 'username'
      >>> pwd = 'your_password'
-     >>> connection=MySQLdb.connect(host,port,user,password,db) 
-     ```
+     >>> connection=MySQLdb.connect(host,port,user,password,db) ```
   
   If all goes well then you can use the script.
