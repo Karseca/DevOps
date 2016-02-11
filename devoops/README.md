@@ -10,7 +10,7 @@ For the script *mysqlbck.py* you'll need to install a package with pip.
   After install you can test it like this:
    
      
-     ```python
+```python
      >>> import MySQLdb
      >>> host = 'hostname'
      >>> port = 'port_num'
