@@ -8,7 +8,12 @@ For the script *mysqlbck.py* you'll need to install a package with pip.
   # pip install MySQL-python
   
   After install you can test it like this:
-   
+  
+  Acess python command line
+
+```bash
+   # python
+```
      
 ```python
      >>> import MySQLdb
