@@ -1,0 +1,37 @@
+#
+# This file has instructions on how to update
+# your firewall rules with snort fules using
+# fwsnort scripts
+#
+# @2016-02-17 by s3cur3n3t
+#
+###############################################################
+To update iptables rules you can follow the examples below
+
+1. Converting rules
+    fwsnort --snort-rfile /etc/snort/rules/ddos.rules
+    fwsnort --snort-rdir /etc/snort/rules
+
+2. Donwload rules and install them in /etc/snort/rules and do the following
+    fwsnort --include-type backdoor,ddos,web-attacks
+    
+3. If you want to include only rules from emerging threats ( https://rules.emergingthreats.net/open/snort-2.9.0/rules/ )
+    fwsnort --include-type emerging-all
+
+4. If you only want some remote rules you can add one or several lines to your /etc/fwsnort/fwsnort.conf
+    ### Default update URL for new rules.  This variable can be given multiple
+    ### times on separate lines in order to specify multiple update URL's:
+    #UPDATE_RULES_URL       <url1>
+    #UPDATE_RULES_URL       <url2>
+    UPDATE_RULES_URL        http://rules.emergingthreats.net/open/snort-2.9.0/emerging-all.rules;
+    UPDATE_RULES_URL        http://rules.emergingthreats.net/open/snort-2.9.0/rules/emerging-scan.rules;
+    
+    On the command line execute this command so fwsnort update your remote rules
+    fwsnort --update-rules
+
+5. After one of this done all you need is to update iptables with the fwsnort script
+    /var/lib/fwsnort/fwsnort_iptcmds.sh
+ 
+Hope you enjoy!
+
+s3cur3n3t
