@@ -18,6 +18,12 @@ touch /tmp/install.log
 echo -e "Install log result of DevOps github" > $RESULT
 echo -e "Please wait while copying files..."
 cp -v -R $LOCATION/* /opt >> $RESULT
+cp -v $LOCATON/secoops/fwsnort_update.sh /usr/local/bin >> $RESULT
+cp -v $LOCATION/secoops/include/rm_tmp.conf /usr/local/include >> $RESULT
+chmod 777 /usr/local/bin/fwsnort_update.sh
+cd /etc/cron.daily
+ls -s /usr/local/bin/fwsnort_upgrade.sh 
+cd 
 
 if [[ -d $INSTDIRDEV && -d $INSTDIRSEC && -d $INSTDIRAUDIT && -a $INSTSCRIPTSDEV && -a $INSTMAINCONFDEV && -a $INSTINCLUDESDEV ]]
 then 
