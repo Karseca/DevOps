@@ -1,3 +1,6 @@
+.
+├── audit
+│   └── readme.txt
 ├── devoops
 │   ├── check_agent.sh
 │   ├── check_deviations.sh
@@ -49,17 +52,24 @@
 │   │   ├── mssql.conf
 │   │   └── whitelist_icmp.conf
 │   ├── gom_menu.sh
-│   └── mysqlbck.py
+│   ├── mysqlbck.py
+│   └── README.md
 ├── install.sh
 ├── LICENSE
 ├── README.md
 └── secoops
     ├── apache_sec.sh
+    ├── fwsnort_update.sh
     ├── include
     │   ├── busybox.conf
     │   ├── fwdmz.conf
+    │   ├── HOWTOUPDATE
+    │   ├── listmodules.pl
     │   ├── masqrt.conf
     │   ├── persfw.conf
     │   ├── pktfiltering.conf
-    │   └── readme.txt
-    └── readme.txt
+    │   ├── readme.txt
+    │   └── rm_tmp.conf
+    ├── readme.txt
+    ├── sshkeyconf.sh
+    └── update_hosts.sh
