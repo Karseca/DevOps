@@ -65,7 +65,7 @@ def sub_conn_local():
 			dump_db()
 		elif select == '2':
 			exit()
-		else
+		else select == '3':
 			menu()
 			
 # Define submenu local connection function
@@ -84,9 +84,9 @@ def sub_conn_remote():
 			dump_db()
 		elif select == '2':
 			exit()
-		else
-			menu()
-
+		else select == '3':
+			menu() 
+        
 # Get user input
 def menu():
 	menu = {}
@@ -104,7 +104,7 @@ def menu():
 			sub_conn_local()
 		elif selection == '2':
 			sub_conn_remote()
-		else
+		else selection == '3':
 			exit()
 
 def main():
