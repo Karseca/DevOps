@@ -15,9 +15,6 @@ MPB=/sbin/modprobe
 LSM=/sbin/lsmod
 RMM=/sbin/rmmod
 
-# Clean firewall before apply due to network card switch failure
-$IPT --flush
-
 # --(Extract Network Information)--
 
 # External network interface data
