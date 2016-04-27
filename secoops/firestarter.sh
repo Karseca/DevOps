@@ -21,21 +21,15 @@ $IPT --flush
 # --(Extract Network Information)--
 
 # External network interface data
-#IP=`LANG=C /sbin/ifconfig $IF | grep inet | cut -d : -f 2 | cut -d \  -f 1`
 IP=`LANG=C /sbin/ifconfig $IF | grep inet | awk '{ print $2 }'`
-#MASK=`LANG=C /sbin/ifconfig $IF | grep Mas | cut -d : -f 4`
 MASK=`LANG=C /sbin/ifconfig $IF | grep netmask | awk '{ print $4}'`
-#BCAST=`LANG=C /sbin/ifconfig $IF | grep Bcast: | cut -d : -f 3 | cut -d \  -f 1`
 BCAST=`LANG=C /sbin/ifconfig $IF | grep broadcast | awk '{print $6 }'`
 NET=$IP/$MASK
 
 if [ "$NAT" = "on" ]; then
 	# Internal network interface data
-	#INIP=`LANG=C /sbin/ifconfig $INIF | grep inet | cut -d : -f 2 | cut -d \  -f 1`
 	INIP=`LANG=C /sbin/ifconfig $IF | grep inet | awk '{ print $2 }'`
-	#INMASK=`LANG=C /sbin/ifconfig $INIF | grep Mas | cut -d : -f 4`
 	INMASK=`LANG=C /sbin/ifconfig $IF | grep netmask | awk '{ print $4 }'`
-	#INBCAST=`LANC=C /sbin/ifconfig $INIF |grep Bcast: | cut -d : -f 3 | cut -d \  -f 1`
 	INBCAST=`LANG=C /sbin/ifconfig $IF | grep broadcast | awk '{print $6 }'`
 	INNET=$INIP/$INMASK
 	
