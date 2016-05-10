@@ -20,7 +20,7 @@ sudo touch /usr/bin/fwsnort_update.sh
 echo "Checking snort version and prepare for rules download..."
 touch $snort_ver_file
 echo $check_snort_ver | grep    | awk '{ print }' >> $snort_ver_file
-wget https://$snort_rules/snort-$(cat $snort_ver_file)/rules/ -P /etc/snort/rules/
+wget -r -N -nH -nd -np -R index.html* https://$snort_rules/snort-$(cat $snort_ver_file)/rules/ -P /etc/snort/rules/
 echo "Firewall snort rules will starting..."
 touch $work_tmp/rules.txt
 ls -la $rules_dir/*.rules  >> $work_tmp/rules.txt
