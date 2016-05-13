@@ -16,17 +16,15 @@ IPTSAVE=$IPT-save
 IPTREST=$IPT-restore
 DATE=$(date +%y-%m-%d_%H%m%s)
 
+# Clear screen
+clear
+
 #
 # Backup your iptables rules
 echo "Where do you wich to backup iptables configuration?"
 read DIR
 echo -e "Saving iptables configuration to" $DIR "please wait.."
-$IPTSAVE $DIR/iptables_$DATE.bck
-
-#
-# Call to function backup
-#
-backup
+$IPTSAVE > $DIR/iptables_$DATE.bck
 
 #
 # Implementing the anti-ddos rules
@@ -102,5 +100,6 @@ $IPT -A port-scanning -j DROP
 #
 # Backup iptables with new rules
 #
+sleep 10
 echo "Backing up iptables with Anti-DDoS rules"
-$IPTSAVE $DIR/iptables_$DATE.bck
+$IPTSAVE > $DIR/iptables_new_$DATE.bck
