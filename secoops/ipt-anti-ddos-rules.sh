@@ -98,7 +98,7 @@ $IPT -A port-scanning -p tcp --tcp-flags SYN,ACK,FIN,RST RST -m limit --limit 1/
 $IPT -A port-scanning -j DROP
 
 #
-# Backup iptables with new rules
+# Backup iptables with new anti-ddos rules
 #
 sleep 10
 echo "Backing up iptables with Anti-DDoS rules"
