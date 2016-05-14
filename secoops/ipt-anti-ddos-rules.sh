@@ -21,6 +21,15 @@ clear
 
 #
 # Backup your iptables rules
+#
+echo -e "###########################################"
+echo -e "#					  #"
+echo -e "#  Anti-DDoS IPTables Rules installation  #"
+echo -e "#     					  #"
+echo -e "#    Created by s3cur3n3t @2016-05-09     #"
+echo -e "#	     s3cn3t@gmail.com             #"
+echo -e "#                                         #"
+echo -e "###########################################"
 echo "Where do you wich to backup iptables configuration?"
 read DIR
 echo -e "Saving iptables configuration to" $DIR "please wait.."
@@ -98,7 +107,7 @@ $IPT -A port-scanning -p tcp --tcp-flags SYN,ACK,FIN,RST RST -m limit --limit 1/
 $IPT -A port-scanning -j DROP
 
 #
-# Backup iptables with new anti-ddos rules
+# Backup iptables with new rules
 #
 sleep 10
 echo "Backing up iptables with Anti-DDoS rules"
