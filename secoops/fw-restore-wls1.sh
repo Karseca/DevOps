@@ -15,6 +15,13 @@ IPT=/sbin/iptables
 IPT_REST=/sbin/iptables-restore
 IPT_SWITCH='--flush'
 
+# Stopping and starting wifi interface
+# to maintain convention interfaces name
+nmcli r wifi off
+ifrename -i wlan0 -n wls1
+nmcli r wifi on
+sleep 20
+
 # Stoping and starting services
 echo -e "Starting firestarter fw..."
 pkill -f firestarter
