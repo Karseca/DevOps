@@ -36,4 +36,7 @@ $IPT $IPT_SWITCH
 # Restore iptables configuration
 echo -e "Restoring firewall state..."
 $IPT_REST /etc/network/iptables_wls1
+
+# Restore Kernel Hardening Configurations
+sysctl -p
 exit

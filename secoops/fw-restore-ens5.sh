@@ -22,6 +22,7 @@ ifconfig eth0 down
 ifrename -i eth0 -n ens5
 sleep 5
 ifconfig ens5 up
+sleep 5
 nmcli d connect ens5
 sleep 10
 
@@ -39,4 +40,7 @@ $IPT $IPT_SWITCH
 # Restore iptables configuration
 echo -e "Restoring firewall state..."
 $IPT_REST /etc/network/iptables_ens5
+
+# Restore Kernel Hardening Configurations
+sysctl -p
 exit
