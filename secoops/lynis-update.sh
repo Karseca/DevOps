@@ -17,6 +17,7 @@ site_download="https://cisofy.com/files/lynis-$update_ver.tar.gz"
 #
 # Check local and online version
 #
+clear
 echo -e "################################################"
 echo -e "#					        #"
 echo -e "#		Lynis update tool		#"
@@ -26,14 +27,12 @@ echo -e "#						#"
 echo -e "# 	Created by s3cur3n3t @2016-7-17		#"
 echo -e "#						#"
 echo -e "################################################"
-clear
 echo -e "Please wait while checking version..."
-if [[ ($local_ver) == ($update_ver) ]]
+if [[ "$local_ver" == "$update_ver" ]]
 then
 	echo "Your lynis version is up to date. Nothing to be done!"
-	clear
 	exit
-elif [[ ($local_ver) != ($update_ver) ]]
+elif [[ "$local_ver" != "$update_ver" ]]
 then
 	echo "New version $update_ver is available do wich to update? [Yes/No]"
 	read INPUT
