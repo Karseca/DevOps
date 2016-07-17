@@ -1,4 +1,4 @@
-#1/bin/bash
+#!/bin/bash
 #
 # This script is intended to update lynis without no errors
 # because lynis tool when using update release gives error
@@ -14,8 +14,18 @@ local_ver=`lynis update info | grep Version | awk '{print $3}'`
 site="https://cisofy.com/download/lynis/"
 update_ver=`curl -s $site | sed -rn '/.*Version:[^0-9]*([0-9.]+).*/p' | grep Version: | sed 's/<\/li>/ /' | awk '{print $2}'`
 site_download="https://cisofy.com/files/lynis-$update_ver.tar.gz"
-
+#
 # Check local and online version
+#
+echo -e "################################################"
+echo -e "#					        #"
+echo -e "#		Lynis update tool		#"
+echo -e "#	 Continuing this will update your 	#"
+echo -e "#		Lynis system audit tool		#"
+echo -e "#						#"
+echo -e "# 	Created by s3cur3n3t @2016-7-17		#"
+echo -e "#						#"
+echo -e "################################################"
 clear
 echo -e "Please wait while checking version..."
 if [[ ($local_ver) == ($update_ver) ]]
@@ -55,4 +65,3 @@ else
 	exit
 fi
 fi
-
