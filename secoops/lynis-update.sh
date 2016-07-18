@@ -19,13 +19,13 @@ site_download="https://cisofy.com/files/lynis-$update_ver.tar.gz"
 #
 clear
 echo -e "################################################"
-echo -e "#					        #"
-echo -e "#		Lynis update tool		#"
-echo -e "#	 Continuing this will update your 	#"
-echo -e "#		Lynis system audit tool		#"
-echo -e "#						#"
-echo -e "# 	Created by s3cur3n3t @2016-7-17		#"
-echo -e "#						#"
+echo -e "#					       #"
+echo -e "#		Lynis update tool	       #"
+echo -e "#	 Continuing this will update your      #"
+echo -e "#		Lynis system audit tool	       #"
+echo -e "#					       #"
+echo -e "# 	Created by s3cur3n3t @2016-7-17	       #"
+echo -e "#					       #"
 echo -e "################################################"
 echo -e "Please wait while checking version..."
 if [[ "$local_ver" == "$update_ver" ]]
@@ -34,7 +34,7 @@ then
 	exit
 elif [[ "$local_ver" != "$update_ver" ]]
 then
-	echo "New version $update_ver is available do wich to update? [Yes/No]"
+	echo "New version $update_ver is available. Do wish to update? [Yes/No]"
 	read INPUT
 	case $INPUT in
 		Y|y|Yes|yes)
