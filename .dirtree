@@ -1,5 +1,7 @@
 .
 ├── audit
+│   ├── port_audit.sh
+│   ├── README.md
 │   └── readme.txt
 ├── devoops
 │   ├── check_agent.sh
@@ -56,20 +58,42 @@
 │   └── README.md
 ├── install.sh
 ├── LICENSE
+├── pentesting
+│   ├── init.txt
+│   └── README.md
 ├── README.md
-└── secoops
-    ├── apache_sec.sh
-    ├── fwsnort_update.sh
-    ├── include
-    │   ├── busybox.conf
-    │   ├── fwdmz.conf
-    │   ├── HOWTOUPDATE
-    │   ├── listmodules.pl
-    │   ├── masqrt.conf
-    │   ├── persfw.conf
-    │   ├── pktfiltering.conf
-    │   ├── readme.txt
-    │   └── rm_tmp.conf
-    ├── readme.txt
-    ├── sshkeyconf.sh
-    └── update_hosts.sh
+├── secoops
+│   ├── apache_sec.sh
+│   ├── conn-menu.py
+│   ├── conn-menu.sh
+│   ├── firestarter.sh
+│   ├── fw-restore-ens5.sh
+│   ├── fw-restore-wls1.sh
+│   ├── fwsnort_update.sh
+│   ├── include
+│   │   ├── busybox.conf
+│   │   ├── fwdmz.conf
+│   │   ├── HOWTOUPDATE
+│   │   ├── listmodules.pl
+│   │   ├── masqrt.conf
+│   │   ├── persfw.conf
+│   │   ├── pktfiltering.conf
+│   │   ├── readme.txt
+│   │   └── rm_tmp.conf
+│   ├── ipt-anti-ddos-rules.sh
+│   ├── kernel-anti-ddos-rules.sh
+│   ├── lynis-update.sh
+│   ├── README.md
+│   ├── readme.txt
+│   ├── srv-cipher-fetch.sh
+│   ├── sshkeyconf.sh
+│   └── update_hosts.sh
+└── utils
+    ├── check_ip_dns.sh
+    ├── check_ipt_snort.sh
+    ├── check_web_access.sh
+    ├── http_response_time.sh
+    ├── init.txt
+    ├── pubip.sh
+    └── README.md
+
