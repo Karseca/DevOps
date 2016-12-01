@@ -2,7 +2,7 @@
 #
 # This script is intended to automate the backup of files
 # from Checkpoint SmartEvent to our Backup server, it will
-# every 3 montges and will only backup the last 90 days old 
+# do it every 2 months and will only backup the last 60 days old 
 # files.
 #
 # Created by s3cur3n3t @2016-11-29
