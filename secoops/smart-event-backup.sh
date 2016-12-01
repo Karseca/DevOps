@@ -5,6 +5,11 @@
 # do it every 2 months and will only backup the last 60 days old 
 # files.
 #
+# To use this script you'll need to do ssh-keygen on your
+# local backup server, and then do ssh-copy-id to the 
+# Checkpoint Smart Event Server and then you can put it 
+# on your cron and every time it runs you receive email
+#
 # Created by s3cur3n3t @2016-11-29
 # Email: s3cn3t@gmail.com
 #
